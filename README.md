@@ -1,73 +1,58 @@
-🌟 NutriSight
+# 🌟 NutriSight  
 
-NutriSight is a web-based health assistant that combines machine learning, image processing, and NLP-powered food analysis to support people with Diabetic Retinopathy (DR).
+**NutriSight** is a web-based health assistant that combines **machine learning**, **image processing**, and **NLP-powered food analysis** to support people with **Diabetic Retinopathy (DR)**.  
 
-It helps users detect the stage of DR from their retinal fundus images and recommends diabetes-friendly meals from restaurant menus, empowering healthier dining choices.
+It detects the **stage of DR** from retinal fundus images and recommends **diabetes-friendly meals** from restaurant menus — empowering users to make informed, healthy dining choices.  
 
-🚀 Features
+---
 
-🧠 Diabetic Retinopathy Detection
+## 🚀 Features  
 
-Preprocessing: CLAHE, grayscale conversion
+- 🧠 **Diabetic Retinopathy Detection**  
+  - Preprocessing: CLAHE, grayscale conversion  
+  - Feature extraction: GLCM, LBP, entropy, vessel density  
+  - Classification: Trained **XGBoost model**  
+  - Predicts **5 DR stages** with confidence scores  
 
-Feature extraction: GLCM, LBP, entropy, vessel density
+- 🍲 **Personalized Food Advisor**  
+  - Analyzes restaurant menus via **text input** or **web-scraping**  
+  - Extracts nutritional data and evaluates dishes against DR-specific dietary rules  
+  - Recommends the most **diabetes-friendly options**  
 
-Classification: Trained XGBoost model
+- 🔗 **Integrated Health Management**  
+  - Combines medical diagnosis with nutrition guidance  
+  - Provides personalized, stage-aware food recommendations  
 
-Predicts 5 DR stages with confidence scores
+---
 
-🍲 Personalized Food Advisor
+## 🛠️ Tech Stack  
 
-Analyzes restaurant menus via text input or web-scraping
+- **Machine Learning**: XGBoost  
+- **Image Processing**: OpenCV, scikit-image  
+- **NLP & Data Handling**: NLTK / difflib, pandas  
+- **Frontend**: Streamlit  
+- **Backend**: Python  
 
-Extracts nutritional data and evaluates dishes against DR-specific dietary rules
+---
 
-Recommends the most diabetes-friendly options
+## 📊 DR Detection Workflow  
 
-🔗 Integration of Medical + Nutrition Insights
+1. **Input**: Retinal fundus image  
+2. **Preprocessing**: CLAHE enhancement + grayscale  
+3. **Feature Extraction**:  
+   - Gray-Level Co-occurrence Matrix (GLCM)  
+   - Local Binary Patterns (LBP)  
+   - Image entropy  
+   - Vessel density  
+4. **Classification**: XGBoost model → predicts **No DR, Mild, Moderate, Severe, or Proliferative**  
+5. **Output**: Predicted stage + confidence score  
 
-Bridges diagnosis and lifestyle choices
+---
 
-Provides users with personalized, stage-aware recommendations
+## 🍽️ Nutrition Recommendation Workflow  
 
-🛠️ Tech Stack
+1. **Input**: Restaurant menu (image/text/web-scraped)  
+2. **Processing**: NLP-based dish name matching with nutrition database  
+3. **Analysis**: Evaluates calories, carbs, sugars, sodium, etc.  
+4. **Output**: Safe vs unsafe dishes with personalized recommendations based on DR stage  
 
-Machine Learning: XGBoost
-
-Image Processing: OpenCV, scikit-image
-
-NLP & Data Handling: NLTK / difflib, pandas
-
-Frontend: Streamlit
-
-Backend: Python
-
-📊 DR Detection Workflow
-
-Input: Retinal fundus image
-
-Preprocessing: CLAHE enhancement + grayscale
-
-Feature Extraction:
-
-Gray-Level Co-occurrence Matrix (GLCM)
-
-Local Binary Patterns (LBP)
-
-Image entropy
-
-Vessel density
-
-Classification: XGBoost model → predicts No DR, Mild, Moderate, Severe, or Proliferative
-
-Output: Predicted stage + confidence score
-
-🍽️ Nutrition Recommendation Workflow
-
-Input: Restaurant menu (image/text/web-scraped)
-
-Processing: NLP-based dish name matching with nutrition database
-
-Analysis: Evaluates calories, carbs, sugars, sodium, etc.
-
-Output: Safe vs unsafe dishes with personalized recommendations based on DR stage
