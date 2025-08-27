@@ -1,0 +1,10 @@
+streamlit==1.37.0
+opencv-python-headless==4.10.0.84
+numpy==1.26.4
+pandas==2.2.2
+Pillow==10.4.0
+scikit-image==0.24.0
+scikit-learn==1.5.1
+xgboost==2.1.1
+joblib==1.4.2
+pytesseract==0.3.10
